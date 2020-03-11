@@ -58,4 +58,4 @@ def exceed_divisors(k):
 start = timeit.default_timer()
 print(exceed_divisors(500))
 stop = timeit.default_timer()
-print('Time: ', stop - start)
+print('Time:', stop - start)
