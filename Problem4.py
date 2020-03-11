@@ -8,7 +8,6 @@ from the product of two 2-digit numbers is 9009 = 91 × 99.
 
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
-
 import timeit
 
 # Checks if a string is palindromic.
@@ -38,4 +37,3 @@ start = timeit.default_timer()
 print(largest_palindrome_product(3))
 stop = timeit.default_timer()
 print('Time:', stop - start)
-            
