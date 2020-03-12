@@ -3,14 +3,14 @@
 Problem 7: 10001st prime
 https://projecteuler.net/problem=7
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see
-that the 6th prime is 13.
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can
+see that the 6th prime is 13.
 
 What is the 10 001st prime number?
 """
 import timeit
 
-# This simple function checks that p is prime (inefficient for large p).
+# This simple function checks that p is prime (slow for large p).
 
 def is_prime(p):
     if p < 2 or isinstance(p, int) == False:
