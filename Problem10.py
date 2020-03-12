@@ -9,7 +9,7 @@ Find the sum of all the primes below two million.
 """
 import timeit
 
-# This function is faster than the simple primality tester in Problem 7.
+# This function is faster than the naive primality tester in Problem 7.
 # Taken from:
 # rookieslab.com/posts/fastest-way-to-check-if-a-number-is-prime-or-not
 # This has speed O(sqrt(n)) since we only check up to sqrt(n).
