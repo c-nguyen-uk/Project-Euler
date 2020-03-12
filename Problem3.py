@@ -9,7 +9,8 @@ What is the largest prime factor of the number 600851475143?
 """
 import timeit
 
-# This function only needs to check up to the floor of the square root of n.
+# This function returns the largest prime factor up to n. Note that
+# it only needs to check up to the floor of the square root of n.
 
 def largest_prime_factor(n):
     i = 2
