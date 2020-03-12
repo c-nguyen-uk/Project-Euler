@@ -3,15 +3,15 @@
 Problem 5: Smallest multiple
 https://projecteuler.net/problem=5
 
-2520 is the smallest number that can be divided by each of the numbers from
-1 to 10 without any remainder.
+2520 is the smallest number that can be divided by each of the number
+from 1 to 10 without any remainder.
 
-What is the smallest positive number that is evenly divisible by all of the
-numbers from 1 to 20?
+What is the smallest positive number that is evenly divisible by all
+of the numbers from 1 to 20?
 """
 import timeit
 
-# This problem can also be solved by finding the lowest common multiple.
+# This problem can also be solved by using lowest common multiple.
 # We focus on a more code-centric solution here.
 
 
@@ -33,7 +33,8 @@ def is_divisible(x, n):
             return False
     return True
 
-# This function finds the smallest number divisible by all naturals to n.
+# This function returns the smallest number divisible by all naturals
+# to n, with some steps being saved on by going in steps of n.
 
 def smallest_number_divisible(n):
     for i in range(n, factorial(n)+1, n):
