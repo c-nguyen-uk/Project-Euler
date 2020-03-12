@@ -3,17 +3,17 @@
 Problem 11: Largest product in a grid
 https://projecteuler.net/problem=11
 
-In the 20×20 grid below, four numbers along a diagonal line have been marked
-in red.
+In the 20×20 grid below, four numbers along a diagonal line have been
+marked in red.
 
 The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 
-What is the greatest product of four adjacent numbers in the same direction
-(up, down, left, right, or diagonally) in the 20×20 grid?
+What is the greatest product of four adjacent numbers in the same
+direction (up, down, left, right, or diagonally) in the 20×20 grid?
 """
 import timeit
 
-# Displaying the problem grid nicely as a string to preserve leading 0s.
+# Displaying the problem grid nicely as a string to retain leading 0s.
 
 p_g = str("""
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
@@ -39,7 +39,7 @@ p_g = str("""
 """.replace(" ", "").replace("\n", ""))
 
 # Creating a matrix out of the problem grid.
-# Note that matrix creation could have been done by hand, but is error-prone.
+# Matrix creation could have been done by hand, but is error-prone.
 
 j = 20
 
@@ -64,12 +64,12 @@ A17 = [p_g[i:i+2] for i in range(34*j, 34*j + 39, 2)]
 A18 = [p_g[i:i+2] for i in range(36*j, 36*j + 39, 2)]
 A19 = [p_g[i:i+2] for i in range(38*j, 38*j + 39, 2)]
 
-# Now A[i][j] calls the ith row, jth column entry in the original problem grid.
+# Now A[i][j] calls the ith row, jth column entry in the problem grid.
 
 A = [A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10,
          A11, A12, A13, A14, A15, A16, A17, A18, A19]
 
-# This function returns the greatest row product of k adjacent numbers.
+# This function returns the greatest row product of k adjacents.
 
 def greatest_row_product(matrix, k):
     max_product = 1
@@ -82,7 +82,7 @@ def greatest_row_product(matrix, k):
                 max_product = prod
     return max_product
 
-# This function returns the greatest column product of k adjacent numbers.
+# This function returns the greatest column product of k adjacents.
 
 def greatest_column_product(matrix, k):
     max_product = 1
@@ -95,8 +95,8 @@ def greatest_column_product(matrix, k):
                 max_product = prod
     return max_product
 
-# This function returns the greatest leading diagonal product of k adjacent
-# numbers. This only works for square matrices.
+# This function returns the greatest leading diagonal product of k
+# adjacents. This only works for square matrices.
 
 def greatest_leading_diagonal_product(matrix, k):
     max_product = 1
@@ -109,8 +109,8 @@ def greatest_leading_diagonal_product(matrix, k):
                     max_product = prod
     return max_product
 
-# This function returns the greatest off diagonal product of k adjacent
-# numbers. This only works for square matrices.
+# This function returns the greatest off diagonal product of k
+# adjacents numbers. This only works for square matrices.
 
 def greatest_off_diagonal_product(matrix, k):
     max_product = 1
