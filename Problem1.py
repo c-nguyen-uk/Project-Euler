@@ -25,7 +25,7 @@ def multiples_below_n(x, n):
 # Printing the solution and ensuring that it completes within 1 minute.
 
 start = timeit.default_timer()
-print(sum(list(dict.fromkeys(multiples_below_n(3, 1000)
-                             + multiples_below_n(5,1000)))) - 1000)
+print(sum(list(set(multiples_below_n(3, 1000)
+                   + multiples_below_n(5,1000)))) - 1000)
 stop = timeit.default_timer()
 print('Time:', stop - start)
