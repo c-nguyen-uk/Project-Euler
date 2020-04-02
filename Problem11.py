@@ -41,28 +41,30 @@ p_g = str("""
 # Creating a matrix out of the problem grid.
 # Matrix creation could have been done by hand, but is error-prone.
 
-j = 20
+def row(n):
+    return [p_g[i:i+2] for i in range(2*n*20, 2*n*20 + 39, 2)]
 
-A0 = [p_g[i:i+2] for i in range(0*j, 0*j + 39, 2)]
-A1 = [p_g[i:i+2] for i in range(2*j, 2*j + 39, 2)]
-A2 = [p_g[i:i+2] for i in range(4*j, 4*j + 39, 2)]
-A3 = [p_g[i:i+2] for i in range(6*j, 6*j + 39, 2)]
-A4 = [p_g[i:i+2] for i in range(8*j, 8*j + 39, 2)]
-A5 = [p_g[i:i+2] for i in range(10*j, 10*j + 39, 2)]
-A6 = [p_g[i:i+2] for i in range(12*j, 12*j + 39, 2)]
-A7 = [p_g[i:i+2] for i in range(14*j, 14*j + 39, 2)]
-A8 = [p_g[i:i+2] for i in range(16*j, 16*j + 39, 2)]
-A9 = [p_g[i:i+2] for i in range(18*j, 18*j + 39, 2)]
-A10 = [p_g[i:i+2] for i in range(20*j, 20*j + 39, 2)]
-A11 = [p_g[i:i+2] for i in range(22*j, 22*j + 39, 2)]
-A12 = [p_g[i:i+2] for i in range(24*j, 24*j + 39, 2)]
-A13 = [p_g[i:i+2] for i in range(26*j, 26*j + 39, 2)]
-A14 = [p_g[i:i+2] for i in range(28*j, 28*j + 39, 2)]
-A15 = [p_g[i:i+2] for i in range(30*j, 30*j + 39, 2)]
-A16 = [p_g[i:i+2] for i in range(32*j, 32*j + 39, 2)]
-A17 = [p_g[i:i+2] for i in range(34*j, 34*j + 39, 2)]
-A18 = [p_g[i:i+2] for i in range(36*j, 36*j + 39, 2)]
-A19 = [p_g[i:i+2] for i in range(38*j, 38*j + 39, 2)]
+A0 = row(0)
+A1 = row(1)
+A2 = row(2)
+A3 = row(3)
+A4 = row(4)
+A5 = row(5)
+A6 = row(6)
+A7 = row(7)
+A8 = row(8)
+A9 = row(9)
+A10 = row(10)
+A11 = row(11)
+A12 = row(12)
+A13 = row(13)
+A14 = row(14)
+A15 = row(15)
+A16 = row(16)
+A17 = row(17)
+A18 = row(18)
+A19 = row(19)
+A20 = row(20)
 
 # Now A[i][j] calls the ith row, jth column entry in the problem grid.
 
