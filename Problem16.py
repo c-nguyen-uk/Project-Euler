@@ -20,4 +20,4 @@ def digit_sum(n):
 start = timeit.default_timer()
 print(digit_sum(2**1000))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
