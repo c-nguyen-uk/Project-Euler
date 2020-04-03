@@ -26,4 +26,4 @@ def largest_prime_factor(n):
 start = timeit.default_timer()
 print(largest_prime_factor(600851475143))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
