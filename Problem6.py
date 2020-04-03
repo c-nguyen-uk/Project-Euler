@@ -34,4 +34,4 @@ def square_of_sum(n):
 start = timeit.default_timer()
 print(square_of_sum(100) - sum_of_squares(100))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
