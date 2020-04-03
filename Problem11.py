@@ -133,4 +133,4 @@ print(sorted([greatest_leading_diagonal_product(A, 4),
                   greatest_column_product(A, 4),
                   greatest_off_diagonal_product(A, 4)])[-1])
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
