@@ -46,4 +46,4 @@ def smallest_number_divisible(n):
 start = timeit.default_timer()
 print(smallest_number_divisible(20))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
