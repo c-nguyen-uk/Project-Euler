@@ -44,4 +44,4 @@ def nth_prime(n):
 start = timeit.default_timer()
 print(nth_prime(10001))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
