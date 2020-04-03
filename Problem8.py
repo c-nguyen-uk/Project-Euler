@@ -60,4 +60,4 @@ def greatest_adjacent_product(n, x):
 start = timeit.default_timer()
 print(greatest_adjacent_product(13, problem_number))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
