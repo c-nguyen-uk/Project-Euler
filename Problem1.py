@@ -27,4 +27,4 @@ def multiples(x, n):
 start = timeit.default_timer()
 print(sum(list(set(multiples_below_n(3, 1000) + multiples_below_n(5,1000)))))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
