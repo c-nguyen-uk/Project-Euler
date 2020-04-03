@@ -59,4 +59,4 @@ def longest_collatz_number(k):
 start = timeit.default_timer()
 print(longest_collatz_number(1000000))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
