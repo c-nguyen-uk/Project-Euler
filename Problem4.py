@@ -36,4 +36,4 @@ def largest_palindrome_product(n):
 start = timeit.default_timer()
 print(largest_palindrome_product(3))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
