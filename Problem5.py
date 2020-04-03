@@ -19,7 +19,7 @@ import timeit
 
 def factorial(n):
     product = 1
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         product *= i
     return product
 
@@ -37,7 +37,7 @@ def is_divisible(x, n):
 # to n, with some steps being saved on by going in steps of n.
 
 def smallest_number_divisible(n):
-    for i in range(n, factorial(n)+1, n):
+    for i in range(n, factorial(n) + 1, n):
         if is_divisible(i, n) == True:
             return i
 
