@@ -36,4 +36,4 @@ def fib_up_to(a, b, L):
 start = timeit.default_timer()
 print(sum([i for i in fib_up_to(1, 2, 4000000) if i % 2 == 0]))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
