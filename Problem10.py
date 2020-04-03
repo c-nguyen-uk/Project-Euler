@@ -38,4 +38,4 @@ def primes_below(n):
 start = timeit.default_timer()
 print(sum(primes_below(2000000)))
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
