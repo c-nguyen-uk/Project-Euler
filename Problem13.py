@@ -118,4 +118,4 @@ large_number = """37107287533902102798797998220837590246510135740250
 start = timeit.default_timer()
 print(str(sum([int(i) for i in large_number.split(",")]))[:10])
 stop = timeit.default_timer()
-print('Time:', stop - start)
+print("Time:", stop - start)
