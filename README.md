@@ -1,7 +1,7 @@
 # Project Euler
 *Completed solutions to the first 100 Project Euler problems (as I complete them).*
 
-[Project Euler](https://projecteuler.net/) is an archive of maths/programming problem-solving questions. Any code needs to run within one minute to really count as a satisfactory solution. To ensure this, all solutions will end with the following syntax
+[Project Euler](https://projecteuler.net/) is an archive of maths/programming problem-solving questions. Any code needs to run within one minute to really count as a satisfactory solution. To ensure this, all solutions will end with the following syntax.
 
 ```Python
 # Printing the solution and ensuring that it completes within 1 minute.
