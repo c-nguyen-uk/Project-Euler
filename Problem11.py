@@ -13,7 +13,7 @@ direction (up, down, left, right, or diagonally) in the 20×20 grid?
 """
 import timeit
 
-# Displaying the problem grid nicely as a string to retain leading 0s.
+# Displays the problem grid nicely as a string to retain leading 0s.
 
 p_g = str("""
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
@@ -38,7 +38,7 @@ p_g = str("""
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 """.replace(" ", "").replace("\n", ""))
 
-# Creating a matrix out of the problem grid.
+# Creats a matrix out of the problem grid.
 # Matrix creation could have been done by hand, but is error-prone.
 
 def row(n):
@@ -125,7 +125,7 @@ def greatest_off_diagonal_product(matrix, k):
                     max_product = prod
     return max_product
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(sorted([greatest_leading_diagonal_product(A, 4),
