@@ -69,7 +69,7 @@ def number_to_text(n):
         word += "one thousand"
     return word.title()
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(sum([len(number_to_text(i).replace(" ", "").replace("-", ""))
