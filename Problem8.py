@@ -13,7 +13,7 @@ the greatest product. What is the value of this product?
 """
 import timeit
 
-# Displaying the problem number nicely as an integer.
+# Displays the problem number nicely as an integer.
 
 problem_number = int("""
 73167176531330624919225119674426574742355349194934
@@ -55,7 +55,7 @@ def greatest_adjacent_product(n, x):
             product = prod(list(str(x)[i:i+n]))
     return product
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(greatest_adjacent_product(13, problem_number))
