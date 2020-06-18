@@ -30,7 +30,7 @@ def factorial(k):
 def routes(m, n):
     return factorial(m + n)//(factorial(m) * factorial(n))
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(routes(20, 20))
