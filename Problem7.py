@@ -39,7 +39,7 @@ def nth_prime(n):
             i += 2
     return prime_list[-1]
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(nth_prime(10001))
