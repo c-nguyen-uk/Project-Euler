@@ -33,7 +33,7 @@ def primes_below(n):
             primes.append(i)
     return primes
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(sum(primes_below(2000000)))
