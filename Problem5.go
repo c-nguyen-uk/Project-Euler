@@ -55,7 +55,7 @@ func smallestNumberDivisible(n int) int {
 	return n
 }
 
-// Printing the solution and ensuring that it completes within 1 minute.
+// Prints the solution and ensures that it completes within 1 minute.
 
 func main() {
 	start := time.Now()
