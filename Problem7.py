@@ -24,7 +24,7 @@ def is_prime(p):
             return False
     return True
 
-# This funciton returns a list of the first n primes.
+# This function returns a list of the first n primes.
 
 def nth_prime(n):
     if n == 1:
