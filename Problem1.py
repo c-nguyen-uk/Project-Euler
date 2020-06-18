@@ -18,7 +18,7 @@ import timeit
 
 def multiples(x, n):
     multiple_list = []
-    for i in range (1, -(-n//x)):  # Implementing the ceiling function.
+    for i in range (1, -(-n//x)):  # Implements the ceiling function.
         multiple_list.append(i*x)
     return multiple_list
 
