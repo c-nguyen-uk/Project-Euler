@@ -54,7 +54,7 @@ def longest_collatz_number(k):
             long_start_number = i
     return long_start_number
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(longest_collatz_number(1000000))
