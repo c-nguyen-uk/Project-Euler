@@ -15,7 +15,7 @@ def digit_sum(n):
     digits = [int(i) for i in str(n)]
     return sum(digits)
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(digit_sum(2**1000))
