@@ -27,7 +27,7 @@ def pythagorean_sum(n):
 
 a, b, c = pythagorean_sum(1000)
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(a*b*c)
