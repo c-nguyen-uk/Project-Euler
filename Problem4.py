@@ -31,7 +31,7 @@ def largest_palindrome_product(n):
                 largest_palindrome = i * j
     return largest_palindrome
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(largest_palindrome_product(3))
