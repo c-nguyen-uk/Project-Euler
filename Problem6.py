@@ -29,7 +29,7 @@ def sum_of_squares(n):
 def square_of_sum(n):
     return int(((n*(n+1))/2)**2)
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(square_of_sum(100) - sum_of_squares(100))
