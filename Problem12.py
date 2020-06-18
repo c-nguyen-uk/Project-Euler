@@ -55,7 +55,7 @@ def exceed_divisors(k):
         divisors = divisor_count(triangular_number(n))
     return triangular_number(n)
 
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(exceed_divisors(500))
