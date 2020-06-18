@@ -31,7 +31,7 @@ def fib_up_to(a, b, L):
         if fib(a, b, i)[-1] > L:
             return fib(a, b, i)[:-1]
         
-# Printing the solution and ensuring that it completes within 1 minute.
+# Prints the solution and ensures that it completes within 1 minute.
 
 start = timeit.default_timer()
 print(sum([i for i in fib_up_to(1, 2, 4000000) if i % 2 == 0]))
