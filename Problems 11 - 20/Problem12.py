@@ -29,12 +29,10 @@ hundred divisors?
 import timeit
 
 # This function returns the value of the nth triangular number.
-
 def triangular_number(n):
     return ((n*(n+1))//2)
 
 # This function returns the number of divisors of n.
-
 def divisor_count(n) : 
     count = 0
     for i in range(1, int(n ** 0.5 + 1)): 
@@ -46,7 +44,6 @@ def divisor_count(n) :
     return count 
 
 # This function finds the first triangular number exceeding k divisors.
-
 def exceed_divisors(k):
     divisors = 1
     n = 0
@@ -55,8 +52,7 @@ def exceed_divisors(k):
         divisors = divisor_count(triangular_number(n))
     return triangular_number(n)
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(exceed_divisors(500))
 stop = timeit.default_timer()
