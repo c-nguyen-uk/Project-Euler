@@ -11,7 +11,6 @@ What is the 10 001st prime number?
 import timeit
 
 # This simple function checks that p is prime (slow for large p).
-
 def is_prime(p):
     if p < 2 or isinstance(p, int) == False:
         return False
@@ -25,7 +24,6 @@ def is_prime(p):
     return True
 
 # This function returns a list of the first n primes.
-
 def nth_prime(n):
     if n == 1:
         return 2
@@ -39,8 +37,7 @@ def nth_prime(n):
             i += 2
     return prime_list[-1]
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(nth_prime(10001))
 stop = timeit.default_timer()
