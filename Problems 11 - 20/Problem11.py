@@ -13,8 +13,8 @@ direction (up, down, left, right, or diagonally) in the 20×20 grid?
 """
 import timeit
 
-# Displays the problem grid nicely as a string to retain leading 0s.
-
+# This variable displays the problem grid nicely as a string.
+# Doing this retains the leading 0s.
 p_g = str("""
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -40,7 +40,6 @@ p_g = str("""
 
 # Creats a matrix out of the problem grid.
 # Matrix creation could have been done by hand, but is error-prone.
-
 def row(n):
     return [p_g[i:i+2] for i in range(2*n*20, 2*n*20 + 39, 2)]
 
@@ -67,12 +66,10 @@ A19 = row(19)
 A20 = row(20)
 
 # Now A[i][j] calls the ith row, jth column entry in the problem grid.
-
 A = [A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10,
          A11, A12, A13, A14, A15, A16, A17, A18, A19]
 
 # This function returns the greatest row product of k adjacents.
-
 def greatest_row_product(matrix, k):
     max_product = 1
     for m in range(len(matrix)):
@@ -85,7 +82,6 @@ def greatest_row_product(matrix, k):
     return max_product
 
 # This function returns the greatest column product of k adjacents.
-
 def greatest_column_product(matrix, k):
     max_product = 1
     for m in range(len(matrix[0])):
@@ -98,8 +94,7 @@ def greatest_column_product(matrix, k):
     return max_product
 
 # This function returns the greatest leading diagonal product of k
-# adjacents. This only works for square matrices.
-
+# adjacents.  This only works for square matrices.
 def greatest_leading_diagonal_product(matrix, k):
     max_product = 1
     for m in range(len(matrix) - k + 1):
@@ -112,8 +107,7 @@ def greatest_leading_diagonal_product(matrix, k):
     return max_product
 
 # This function returns the greatest off diagonal product of k
-# adjacents numbers. This only works for square matrices.
-
+# adjacents numbers.  This only works for square matrices.
 def greatest_off_diagonal_product(matrix, k):
     max_product = 1
     for m in range(len(matrix) - k + 1):
@@ -125,8 +119,7 @@ def greatest_off_diagonal_product(matrix, k):
                     max_product = prod
     return max_product
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(sorted([greatest_leading_diagonal_product(A, 4),
                   greatest_row_product(A, 4),
