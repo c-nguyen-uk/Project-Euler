@@ -15,15 +15,13 @@ import timeit
 
 
 # This function returns a list of multiples of x, below n.
-
 def multiples(x, n):
     multiple_list = []
-    for i in range (1, -(-n//x)):  # Implements the ceiling function.
+    for i in range (1, -(-n//x)):  # Implement the ceiling function
         multiple_list.append(i*x)
     return multiple_list
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(sum(list(set(multiples_below_n(3, 1000) + multiples_below_n(5,1000)))))
 stop = timeit.default_timer()
