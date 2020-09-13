@@ -12,7 +12,6 @@ How many such routes are there through a 20×20 grid?
 import timeit
 
 # This function returns n!.
-
 def factorial(k):
     product = 1
     for i in range(1, k + 1):
@@ -21,17 +20,16 @@ def factorial(k):
 
 # This function uses combinatorics to return the number of routes
 # through a general m x n grid.
+#
 # To see why this is true, note that for an m x n grid we must travel
 # to the right m times, and down n times, no matter what route we take.
-# There are (m + n)! ways to arrange (m + n) different items. However,
+# There are (m + n)! ways to arrange (m + n) different items.  However,
 # in our case, m of the items are right, and n of the items are down,
 # so we need to remove these m! and n! repetitions from our count.
-
 def routes(m, n):
     return factorial(m + n)//(factorial(m) * factorial(n))
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(routes(20, 20))
 stop = timeit.default_timer()
