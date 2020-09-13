@@ -10,13 +10,11 @@ What is the sum of the digits of the number 2^1000?
 import timeit
 
 # This simple function returns the digit sum of any integer.
-
 def digit_sum(n):
     digits = [int(i) for i in str(n)]
     return sum(digits)
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(digit_sum(2**1000))
 stop = timeit.default_timer()
