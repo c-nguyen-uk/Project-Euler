@@ -16,7 +16,6 @@ import timeit
 
 # This brute force function returns Pythaogrean triples which sum to n.
 # A more efficient algorithm can be found via parametrisation.
-
 def pythagorean_sum(n):
     for a in range(1,n):
         for b in range(1, n):
@@ -27,8 +26,7 @@ def pythagorean_sum(n):
 
 a, b, c = pythagorean_sum(1000)
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(a*b*c)
 stop = timeit.default_timer()
