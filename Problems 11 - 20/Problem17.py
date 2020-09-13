@@ -20,9 +20,7 @@ import timeit
 # This problem can also be solved by hand.
 # We focus on a more code-centric solution here.
 
-
 # The below are dictionaries of all relevant digits.
-
 units = {"1": "one", "2": "two", "3": "three", "4": "four", "5": "five",
          "6": "six", "7": "seven", "8": "eight", "9": "nine"}
 elevens = {"11": "eleven", "12": "twelve", "13": "thirteen", "14": "fourteen",
@@ -32,32 +30,31 @@ tens = {"20": "twenty", "30": "thirty", "40": "forty", "50": "fifty",
         "60": "sixty", "70": "seventy", "80": "eighty", "90": "ninety"}
 
 # This function converts any integer from 1 to 1000 into text.
-# This can be generalised for greater ranges using similar logic. It is
+# We can generalise for greater ranges using similar logic.  It is
 # possible to refactor this code to avoid repeated logic, but one needs
 # to be careful to deal with any indexing issues.
-
 def number_to_text(n):
     n = str(n)
     word = ""
-    if len(n) == 1:  # Does 1-9
+    if len(n) == 1:  # Do 1-9
         word += units[n[-1]]
     if len(n) == 2:
-        if n[-2] == "1" and n[-1] == "0":  # Does 10
+        if n[-2] == "1" and n[-1] == "0":  # Do 10
             word += "ten"
-        elif n[-2] == "1" and n[-1] != "0":  # Does 11-19
+        elif n[-2] == "1" and n[-1] != "0":  # Do 11-19
             word += elevens[n[-2:]]
-        if n[-2] != "1" and n[-1] != "0":  # Does 21-99 not ending in 0
+        if n[-2] != "1" and n[-1] != "0":  # Do 21-99, not ending in 0
             word += tens[n[-2] + "0"] + "-" + units[n[-1]]
-        elif n[-2] != "1" and n[-1] == "0":  # Does 20-90 ending in 0
+        elif n[-2] != "1" and n[-1] == "0":  # Do 20-90, ending in 0
             word += tens[n[-2:]]
     if len(n) == 3:
-        if n[-2] == "0" and n[-1] == "0":  # Does 100-900 ending in 00
+        if n[-2] == "0" and n[-1] == "0":  # Do 100-900, ending in 00
             word += units[n[-3]] + " hundred"
         elif n[-2] != "0" or n[-3] != "0":
             word += units[n[0]] + " hundred and "
-            if n[-2] == "1" and n[-1] != "0":  # Does 101-999 ending in 11-19
+            if n[-2] == "1" and n[-1] != "0":  # Do 101-999, ending in 11-19
                 word += elevens[n[-2:]]
-            elif n[-2] == "1" and n[-1] == "0":  # Does 101-999 ending in 10
+            elif n[-2] == "1" and n[-1] == "0":  # Do 101-999, ending in 10
                 word += "ten"
             if n[-2] != "1" and n[-2] != "0" and n[-1] != "0":
                 word += tens[n[-2] + "0"] + "-" + units[n[-1]]
@@ -69,8 +66,7 @@ def number_to_text(n):
         word += "one thousand"
     return word.title()
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(sum([len(number_to_text(i).replace(" ", "").replace("-", ""))
            for i in range(1, 1001)]))
