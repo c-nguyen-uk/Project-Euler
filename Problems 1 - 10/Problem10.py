@@ -13,7 +13,6 @@ import timeit
 # Taken from:
 # rookieslab.com/posts/fastest-way-to-check-if-a-number-is-prime-or-not
 # This has speed O(sqrt(n)) since we only check up to sqrt(n).
-
 def is_prime(n):
     if n < 2 or isinstance(n, int) == False:
         return False
@@ -25,7 +24,6 @@ def is_prime(n):
     return True
 
 # This function returns a list of all primes below n.
-    
 def primes_below(n):
     primes = []
     for i in range(n):
@@ -33,8 +31,7 @@ def primes_below(n):
             primes.append(i)
     return primes
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(sum(primes_below(2000000)))
 stop = timeit.default_timer()
