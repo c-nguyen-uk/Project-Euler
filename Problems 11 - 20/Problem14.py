@@ -29,7 +29,6 @@ import timeit
 # Note also that if n is odd, then 3n+1 is even, so we can add 2 to the
 # count and instead compute the next element of the chain using
 # an input of (3n+1)/2.
-
 def collatz_seq(n):
     count = 1
     if n == 1:
@@ -44,9 +43,8 @@ def collatz_seq(n):
     return count
 
 # This function returns the starting number under k with the longest
-# sequence. Note that since collatz_seq(n) = collatz_seq(n/2) + 1, for
+# sequence.  Note that since collatz_seq(n) = collatz_seq(n/2) + 1, for
 # even n, we don't need to compute any chains below k/2.
-
 def longest_collatz_number(k):
     long_start_number = 1
     for i in range(k//2 + 1, k):
@@ -54,8 +52,7 @@ def longest_collatz_number(k):
             long_start_number = i
     return long_start_number
 
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(longest_collatz_number(1000000))
 stop = timeit.default_timer()
