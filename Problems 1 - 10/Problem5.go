@@ -21,7 +21,6 @@ import (
 )
 
 // This simple function returns n!
-
 func factorial(n int) int {
 	product := 1
 	for i := 1; i < n+1; i++ {
@@ -31,7 +30,6 @@ func factorial(n int) int {
 }
 
 // This function checks if x is divisible by all naturals up to n.
-
 func isDivisible(x int, n int) bool {
 	for i := 1; i < n+1; i++ {
 		if x%i == 0 {
@@ -45,7 +43,6 @@ func isDivisible(x int, n int) bool {
 
 // This function returns the smallest number divisible by all naturals
 // to n, with some steps being saved on by going in steps of n.
-
 func smallestNumberDivisible(n int) int {
 	for i := n; i < factorial(n)+1; i += n {
 		if isDivisible(i, n) == true {
@@ -55,8 +52,7 @@ func smallestNumberDivisible(n int) int {
 	return n
 }
 
-// Prints the solution and ensures that it completes within 1 minute.
-
+// This prints the solution and the time to completion.
 func main() {
 	start := time.Now()
 	fmt.Println(smallestNumberDivisible(20))
