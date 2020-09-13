@@ -18,19 +18,16 @@ import timeit
 # We use well-known mathematical formulae here for optimisation.
 # A purely code-centric solution without maths is trivial to do.
 
-
 # This function returns the sum of the squares of the first n naturals.
-
 def sum_of_squares(n):
     return int((n*(n+1)*(2*n+1))/6)
 
 # This function returns the square of the sum of the first n naturals.
-
 def square_of_sum(n):
     return int(((n*(n+1))/2)**2)
 
-# Prints the solution and ensures that it completes within 1 minute.
 
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(square_of_sum(100) - sum_of_squares(100))
 stop = timeit.default_timer()
