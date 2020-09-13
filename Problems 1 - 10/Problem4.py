@@ -10,8 +10,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 import timeit
 
-# Checks if a string is palindromic.
-
+# This function checks if a string is palindromic.
 def is_pal(text):
     if list(text) == list(reversed(list(text))):
         return True
@@ -20,7 +19,6 @@ def is_pal(text):
 
 # This function returns the largest palindrome made from two n-digit
 # numbers by checking all possible multiplicative combinations.
-
 def largest_palindrome_product(n):
     largest_factor = (10 ** n) - 1
     smallest_factor = 10 ** (n-1)
@@ -31,8 +29,8 @@ def largest_palindrome_product(n):
                 largest_palindrome = i * j
     return largest_palindrome
 
-# Prints the solution and ensures that it completes within 1 minute.
 
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(largest_palindrome_product(3))
 stop = timeit.default_timer()
