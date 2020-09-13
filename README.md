@@ -4,8 +4,7 @@
 [Project Euler](https://projecteuler.net/) is an archive of maths/programming problem-solving questions. Any code needs to run within one minute to really count as a satisfactory solution. To ensure this, all solutions will end with the following syntax.
 
 ```Python
-# Prints the solution and ensures that it completes within 1 minute.
-
+# This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(solution_function)
 stop = timeit.default_timer()
