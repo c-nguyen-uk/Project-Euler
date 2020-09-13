@@ -13,7 +13,6 @@ import timeit
 # This problem can also be solved using arithmetic sums.
 # We focus on a more code-centric solution here.
 
-
 # This function returns a list of multiples of x, below n.
 def multiples(x, n):
     multiple_list = []
