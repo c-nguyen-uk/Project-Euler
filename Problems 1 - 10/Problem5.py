@@ -37,7 +37,6 @@ def smallest_number_divisible(n):
         if is_divisible(i, n) == True:
             return i
 
-
 # This prints the solution and the time to completion.
 start = timeit.default_timer()
 print(smallest_number_divisible(20))
