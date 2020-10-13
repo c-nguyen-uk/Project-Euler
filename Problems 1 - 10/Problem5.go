@@ -9,7 +9,7 @@ What is the smallest positive number that is evenly divisible by all
 of the numbers from 1 to 20?
 
 Note: This solution is the Go version of what has already been done in
-Python as a way to test language performance differences. The Python
+Python as a way to test language performance differences.  The Python
 version takes at least 8 seconds to run, whereas the Go version
 completes in less than a second.
 */
