@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Problem 11: Largest product in a grid
+"""Problem 11: Largest product in a grid
+
 https://projecteuler.net/problem=11
 
 In the 20×20 grid below, four numbers along a diagonal line have been
@@ -11,11 +11,10 @@ The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 What is the greatest product of four adjacent numbers in the same
 direction (up, down, left, right, or diagonally) in the 20×20 grid?
 """
-import timeit
+from custom_timer import computation_time
 
-# This variable displays the problem grid nicely as a string.
-# Doing this retains the leading 0s.
-p_g = str("""
+
+PROBLEM_GRID = str("""
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -40,37 +39,26 @@ p_g = str("""
 
 # Creats a matrix out of the problem grid.
 # Matrix creation could have been done by hand, but is error-prone.
+
+
 def row(n):
-    return [p_g[i:i+2] for i in range(2*n*20, 2*n*20 + 39, 2)]
+    """Return the row of PROBLEM_GRID as a list."""
+    return [PROBLEM_GRID[i:i+2] for i in range(2*n*20, 2*n*20 + 39, 2)]
 
-A0 = row(0)
-A1 = row(1)
-A2 = row(2)
-A3 = row(3)
-A4 = row(4)
-A5 = row(5)
-A6 = row(6)
-A7 = row(7)
-A8 = row(8)
-A9 = row(9)
-A10 = row(10)
-A11 = row(11)
-A12 = row(12)
-A13 = row(13)
-A14 = row(14)
-A15 = row(15)
-A16 = row(16)
-A17 = row(17)
-A18 = row(18)
-A19 = row(19)
-A20 = row(20)
 
-# Now A[i][j] calls the ith row, jth column entry in the problem grid.
-A = [A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10,
-         A11, A12, A13, A14, A15, A16, A17, A18, A19]
+def matrix():
+    """Convert PROBLEM_GRID into a matrix.
 
-# This function returns the greatest row product of k adjacents.
+    Calling matrix()[i][j] returns the ith row, jth column entry.
+    """
+    matrix_list = []
+    for i in range(20):
+        matrix_list.append(row(i))
+    return matrix_list
+
+
 def greatest_row_product(matrix, k):
+    """Return the greatest row product of k adjacents."""
     max_product = 1
     for m in range(len(matrix)):
         for n in range(len(matrix[m]) - k + 1):
@@ -81,8 +69,9 @@ def greatest_row_product(matrix, k):
                 max_product = prod
     return max_product
 
-# This function returns the greatest column product of k adjacents.
+
 def greatest_column_product(matrix, k):
+    """Return the greatest column product of k adjacents."""
     max_product = 1
     for m in range(len(matrix[0])):
         for n in range(len(matrix) - k + 1):
@@ -93,9 +82,12 @@ def greatest_column_product(matrix, k):
                 max_product = prod
     return max_product
 
-# This function returns the greatest leading diagonal product of k
-# adjacents.  This only works for square matrices.
+
 def greatest_leading_diagonal_product(matrix, k):
+    """Return the greatest leading diagonal product of k adjacents.
+
+    Note that this function only works for square matrices.
+    """
     max_product = 1
     for m in range(len(matrix) - k + 1):
         for n in range(len(matrix) - k + 1):
@@ -106,9 +98,12 @@ def greatest_leading_diagonal_product(matrix, k):
                     max_product = prod
     return max_product
 
-# This function returns the greatest off diagonal product of k
-# adjacents numbers.  This only works for square matrices.
+
 def greatest_off_diagonal_product(matrix, k):
+    """Return the greatest off diagonal product of k adjacents.
+
+    Note that this function only works for square matrices.
+    """
     max_product = 1
     for m in range(len(matrix) - k + 1):
         for n in range(len(matrix) - 1, k - 1, -1):
@@ -119,11 +114,14 @@ def greatest_off_diagonal_product(matrix, k):
                     max_product = prod
     return max_product
 
-# This prints the solution and the time to completion.
-start = timeit.default_timer()
-print(sorted([greatest_leading_diagonal_product(A, 4),
-                  greatest_row_product(A, 4),
-                  greatest_column_product(A, 4),
-                  greatest_off_diagonal_product(A, 4)])[-1])
-stop = timeit.default_timer()
-print("Time:", stop - start)
+
+@computation_time
+def solution(k):
+    """Return the solution, for k adjacents."""
+    return (sorted([greatest_leading_diagonal_product(matrix(), k),
+                    greatest_row_product(matrix(), k),
+                    greatest_column_product(matrix(), k),
+                    greatest_off_diagonal_product(matrix(), k)])[-1])
+
+
+print(solution(4))
