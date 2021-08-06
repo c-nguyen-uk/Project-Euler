@@ -8,8 +8,8 @@ If we list all the natural numbers below 10 that are multiples of 3 or
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 
-Solver note: This problem can also be solved using arithmetic sums, but we
-focus on a more code-centric solution here.
+Solver note: This problem can also be solved using arithmetic sums, but
+we focus on a more code-centric solution here.
 """
 from custom_timer import computation_time
 
