@@ -1,27 +1,23 @@
 # -*- coding: utf-8 -*-
-"""
-Problem 3: Largest prime factor
+"""Problem 3: Largest prime factor
+
 https://projecteuler.net/problem=3
-
 The prime factors of 13195 are 5, 7, 13 and 29.
-
 What is the largest prime factor of the number 600851475143?
 """
-import timeit
+from custom_timer import computation_time
 
-# This function returns the largest prime factor up to n.  Note that
-# it only needs to check up to the floor of the square root of n.
-def largest_prime_factor(n):
+
+@computation_time
+def solution(n):
+    """Return the largest prime factor up to n."""
     i = 2
-    while i <= int(n ** 0.5):
-        if n % i != 0:
+    while i <= int(n ** 0.5):  # Check up to floor(sqrt(n)) is sufficient
+        if n % i:
             i += 1
         else:
             n = n//i
     return n
 
-# This prints the solution and the time to completion.
-start = timeit.default_timer()
-print(largest_prime_factor(600851475143))
-stop = timeit.default_timer()
-print("Time:", stop - start)
+
+print(solution(600851475143))
