@@ -1,21 +1,20 @@
 # -*- coding: utf-8 -*-
-"""
-Problem 16: Power digit sum
+"""Problem 16: Power digit sum
+
 https://projecteuler.net/problem=16
 
 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
 
 What is the sum of the digits of the number 2^1000?
 """
-import timeit
+from custom_timer import computation_time
 
-# This simple function returns the digit sum of any integer.
-def digit_sum(n):
+
+@computation_time
+def solution(n):
+    """Return the solution, for an integer n."""
     digits = [int(i) for i in str(n)]
     return sum(digits)
 
-# This prints the solution and the time to completion.
-start = timeit.default_timer()
-print(digit_sum(2**1000))
-stop = timeit.default_timer()
-print("Time:", stop - start)
+
+print(solution(2**1000))
