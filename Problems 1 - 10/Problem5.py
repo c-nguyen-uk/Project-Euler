@@ -9,8 +9,8 @@ from 1 to 10 without any remainder.
 What is the smallest positive number that is evenly divisible by all
 of the numbers from 1 to 20?
 
-Solver note: This problem can also be solved by using lowest common multiple,
-but we focus on a more code-centric solution here.
+Solver note: This problem can also be solved by using lowest common
+multiple, but we focus on a more code-centric solution here.
 """
 from custom_timer import computation_time
 
