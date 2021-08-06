@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Problem 8: Largest product in a series
+"""Problem 8: Largest product in a series
+
 https://projecteuler.net/problem=8
 
 The four adjacent digits in the 1000-digit number that have the
@@ -11,10 +11,10 @@ the greatest product. What is the value of this product?
 
 (The 1000-digit number is defined in our solution.)
 """
-import timeit
+from custom_timer import computation_time
 
-# This variable displays the problem number nicely as an integer.
-problem_number = int("""
+
+PROBLEM_NUMBER = int("""
 73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -34,26 +34,26 @@ problem_number = int("""
 07198403850962455444362981230987879927244284909188
 84580156166097919133875499200524063689912560717606
 05886116467109405077541002256983155200055935729725
-71636269561882670428252483600823257530420752963450""".replace("\n", ""))
+71636269561882670428252483600823257530420752963450
+""".replace("\n", ""))
 
-# This function returns the product of the numbers in a list.
-def prod(list):
+
+def prod(number_list):
+    """Return the product of the numbers in list."""
     product = 1
-    for i in range(len(list)):
-        product *= int(list[i])
+    for i in number_list:
+        product *= int(i)
     return product
 
-# This function finds the greatest product of n adjacent numbers in x.
-# We typecast x to a string to enable string slicing for simpler code.
-def greatest_adjacent_product(n, x):
+
+@computation_time
+def solution(n):
+    """Return the solution, for n adjacent numbers."""
     product = 1
-    for i in range(0, len(str(x)) - n + 1):
-        if prod(list(str(x)[i:i+n])) > product:
-            product = prod(list(str(x)[i:i+n]))
+    for i in range(len(str(PROBLEM_NUMBER)) - n + 1):
+        if prod(list(str(PROBLEM_NUMBER)[i:i+n])) > product:
+            product = prod(list(str(PROBLEM_NUMBER)[i:i+n]))
     return product
 
-# This prints the solution and the time to completion.
-start = timeit.default_timer()
-print(greatest_adjacent_product(13, problem_number))
-stop = timeit.default_timer()
-print("Time:", stop - start)
+
+print(solution(13))
