@@ -46,7 +46,7 @@ def row(n):
     return [PROBLEM_GRID[i:i+2] for i in range(2*n*20, 2*n*20 + 39, 2)]
 
 
-def matrix():
+def problem_matrix():
     """Convert PROBLEM_GRID into a matrix.
 
     Calling matrix()[i][j] returns the ith row, jth column entry.
@@ -118,10 +118,10 @@ def greatest_off_diagonal_product(matrix, k):
 @computation_time
 def solution(k):
     """Return the solution, for k adjacents."""
-    return (sorted([greatest_leading_diagonal_product(matrix(), k),
-                    greatest_row_product(matrix(), k),
-                    greatest_column_product(matrix(), k),
-                    greatest_off_diagonal_product(matrix(), k)])[-1])
+    return (sorted([greatest_leading_diagonal_product(problem_matrix(), k),
+                    greatest_row_product(problem_matrix(), k),
+                    greatest_column_product(problem_matrix(), k),
+                    greatest_off_diagonal_product(problem_matrix(), k)])[-1])
 
 
 print(solution(4))
