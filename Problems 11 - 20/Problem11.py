@@ -37,9 +37,6 @@ PROBLEM_GRID = str("""
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 """.replace(" ", "").replace("\n", ""))
 
-# Creats a matrix out of the problem grid.
-# Matrix creation could have been done by hand, but is error-prone.
-
 
 def row(n):
     """Return the nth row of PROBLEM_GRID as a list."""
