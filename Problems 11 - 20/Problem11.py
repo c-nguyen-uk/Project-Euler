@@ -46,7 +46,7 @@ def row(n):
 def problem_matrix():
     """Convert PROBLEM_GRID into a matrix.
 
-    Calling matrix()[i][j] returns the ith row, jth column entry.
+    Calling problem_matrix()[i][j] returns the ith row, jth column entry.
     """
     matrix_list = []
     for i in range(20):
