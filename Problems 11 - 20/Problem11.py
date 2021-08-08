@@ -42,7 +42,7 @@ PROBLEM_GRID = str("""
 
 
 def row(n):
-    """Return the row of PROBLEM_GRID as a list."""
+    """Return the nth row of PROBLEM_GRID as a list."""
     return [PROBLEM_GRID[i:i+2] for i in range(2*n*20, 2*n*20 + 39, 2)]
 
 
