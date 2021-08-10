@@ -17,6 +17,8 @@ from custom_timer import computation_time
 
 def factorial(n):
     """Return n!."""
+    if not n:
+        return 1
     product = 1
     for i in range(1, n + 1):
         product *= i
