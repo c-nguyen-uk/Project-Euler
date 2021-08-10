@@ -39,10 +39,10 @@ def is_abundant(n):
 
 def is_expressible_as_sum(n, list_of_nums):
     """Check if n can be formed as a sum of two elements in list_of_nums."""
-    dict_of_nums = dict.fromkeys(list_of_nums)  # Allow for fast lookup
-    for num in dict_of_nums:
+    set_of_nums = set(list_of_nums)  # Allow fast lookup algorithm usage
+    for num in set_of_nums:
         num_to_lookup = n - num
-        if num_to_lookup in dict_of_nums:
+        if num_to_lookup in set_of_nums:
             return True
     return False
 
