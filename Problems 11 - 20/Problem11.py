@@ -91,8 +91,8 @@ def greatest_leading_diagonal_product(matrix, k):
             prod = 1
             for o in range(k):
                 prod *= int(matrix[m + o][n + o])
-                if prod > max_product:
-                    max_product = prod
+            if prod > max_product:
+                max_product = prod
     return max_product
 
 
@@ -107,8 +107,8 @@ def greatest_off_diagonal_product(matrix, k):
             prod = 1
             for o in range(k):
                 prod *= int(matrix[m + o][n - o])
-                if prod > max_product:
-                    max_product = prod
+            if prod > max_product:
+                max_product = prod
     return max_product
 
 
